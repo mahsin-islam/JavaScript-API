@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h2>JavaScript Object Notation</h2>
+    <script>
+        const user = {
+            id: 245,
+            name: "Masud",
+            // lover: "Jamila",
+            lover: {
+                name: "Jamila",
+                favFood: "Pizza"
+            },
+            friendsAge:[12,45,56],
+            friends:["kamal","Jamal","Samal"]
+        };
+        // index.html:22 {"id":245,"name":"Masud","friendsAge":[12,45,56],"friends":["kamal","Jamal","Samal"]}
+        // const user = {id: 245, name: "Masud"};
+
+        // Server a  pathale Stingfy kore pathabo
+        const userJSON = JSON.stringify(user);
+        console.log(userJSON);
+        // R server thake recive korle parse kore recive korbo
+        const userFromJSON = JSON.parse(userJSON);
+        console.log(userFromJSON);
+    </script>
+</body>
+</html>
